@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/Head1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:foregroundGravity="center"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="1dp"
+            android:text="BMI CALCULATOR"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="25dp" />
+
+        <RadioGroup
+            android:id="@+id/group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp">
+
+            <RadioButton
+                android:id="@+id/radioButton1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Metric System" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Imperial System" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="For Metric system, please enter the weight in kg and height in meters"
+            android:textColor="@android:color/background_dark"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="For Imperial system, please enter the weight in pounds and height in inches"
+            android:textColor="@android:color/background_dark"
+            android:textSize="12sp" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/Masshead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Weight:"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/mass"
+                android:layout_width="29dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="10"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="25dp"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/HeaghtHead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="Height:"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/height"
+                android:layout_width="29dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="10"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/clear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:onClick="Clear"
+                android:text="Clear"
+                android:textStyle="italic" />
+
+            <Button
+                android:id="@+id/calc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:onClick="CalculateBMI"
+                android:text="Calculate BMI"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="378dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"
+            android:text="If your BMI is less than 18.5, it falls within the underweight range. If your BMI is 18.5 to less than 25, it falls within normal. If your BMI is 25.0 to less than 30, it falls within the overweight range. If your BMI is 30.0 or higher, it falls within the obese range."
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@android:color/holo_purple"
+            android:textSize="15sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
